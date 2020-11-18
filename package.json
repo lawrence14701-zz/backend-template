@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawrence14701/fullstack-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lawrence14701/fullstack-template/issues"
+  },
+  "homepage": "https://github.com/lawrence14701/fullstack-template#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.8",
+    "typescript": "^4.0.5"
+  }
+}
