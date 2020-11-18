@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lawrence14701/fullstack-template.git"
