@@ -11,3 +11,15 @@ requires yarn watch to be running in another terminal, this method is much faste
 # yarn watch
 
 takes typescript code and turns it into javascript with recompiling
+
+# Mikro ORM
+
+## description
+
+is TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. First create the models, then use script to create migrations.
+
+## scripts
+
+- npx mikro-orm migration:create
+
+###
