@@ -16,7 +16,7 @@ takes typescript code and turns it into javascript with recompiling
 
 ## description
 
-is TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns.
+is TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. First create the models, then use script to create migrations.
 
 ## scripts
 
