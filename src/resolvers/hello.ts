@@ -1,5 +1,3 @@
-import { Resolver } from "dns";
-
 import { Query } from "type-graphql";
 
 export class HelloResolver {
