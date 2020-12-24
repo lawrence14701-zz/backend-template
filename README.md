@@ -8,6 +8,8 @@
 
 - MikroOrm is TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns
 
+- argon2 for hashing passwords, which has a better algo for securing passwords than bcrypt [Argon2 vs bycrpt](https://security.stackexchange.com/questions/193351/in-2018-what-is-the-recommended-hash-to-store-passwords-bcrypt-scrypt-argon2) [docs](https://github.com/ranisalt/node-argon2#readme)
+
 # How to set up dev env
 
 1. yarn dev2 (ts-node) (slower,not being used)
@@ -30,4 +32,15 @@ First create the models, then use script to create migrations.
 
 ## scripts
 
-- npx mikro-orm migration:create
+- yarn create:migration
+
+creates migrations
+
+# How to create new tables in database
+
+1. Create an entity
+2. add entity to mikro-orm.config
+3. create a resolver
+4. add resolver to index.ts
+5. test if table is created by using graphql playground
+6. go to localhost:4000/graphql for local testing
