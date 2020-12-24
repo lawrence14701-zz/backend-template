@@ -8,7 +8,7 @@
 
 - MikroOrm is TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns
 
-- argon2 for hashing passwords, which has a better algo for securing passwords than bcrypt [Argon2 vs bycrpt](https://security.stackexchange.com/questions/193351/in-2018-what-is-the-recommended-hash-to-store-passwords-bcrypt-scrypt-argon2)
+- argon2 for hashing passwords, which has a better algo for securing passwords than bcrypt [Argon2 vs bycrpt](https://security.stackexchange.com/questions/193351/in-2018-what-is-the-recommended-hash-to-store-passwords-bcrypt-scrypt-argon2) [docs](https://github.com/ranisalt/node-argon2#readme)
 
 # How to set up dev env
 
