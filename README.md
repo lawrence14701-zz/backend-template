@@ -10,6 +10,10 @@
 
 - argon2 for hashing passwords, which has a better algo for securing passwords than bcrypt, why it is better [Argon2 vs bycrpt](https://security.stackexchange.com/questions/193351/in-2018-what-is-the-recommended-hash-to-store-passwords-bcrypt-scrypt-argon2), and here are the [docs](https://github.com/ranisalt/node-argon2#readme)
 
+- express session to store cookie on the user's browser for session authentication, [documentation](https://github.com/expressjs/session#readme), data is going to be stored in a redis database becuase its very fast and becuase we need to get the cookie and check if the user is logged in on every request. [docs for connecting redis for session auth](https://github.com/tj/connect-redis)
+
+- postgres and redis for DB
+
 # How to set up dev env
 
 1. yarn dev2 (ts-node) (slower,not being used)
