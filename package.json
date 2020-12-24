@@ -6,7 +6,8 @@
   "scripts": {
     "alternativeStart": "nodemon --exec ts-node src/index.ts",
     "dev": "nodemon dist/index.js",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "create:migration": "mikro-orm migration:create"
   },
   "repository": {
     "type": "git",

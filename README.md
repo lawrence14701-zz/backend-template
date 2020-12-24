@@ -30,4 +30,6 @@ First create the models, then use script to create migrations.
 
 ## scripts
 
-- npx mikro-orm migration:create
+- yarn create:migration
+
+creates migrations
