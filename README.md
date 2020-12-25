@@ -16,6 +16,8 @@
 
 # How to set up dev env
 
+1. start redis server and postgres server [redis](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-redis.html)
+
 1. yarn dev2 (ts-node) (slower,not being used)
 
 - I wanted to get as close to production in dev so i did not use this command, but you can use it if you like. Ts-node takes time because it first has to complie the TS code into JS and then execute the JS code
@@ -48,3 +50,7 @@ creates migrations
 4. add resolver to index.ts
 5. test if table is created by using graphql playground
 6. go to localhost:4000/graphql for local testing
+
+# trouble shooting
+
+- if cookies are not being set in your graphql playground check the settings. Make sure request.credentials is set to 'include'

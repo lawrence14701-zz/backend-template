@@ -11,6 +11,7 @@ import { UserResolver } from "./resolvers/user";
 import redis from "redis";
 import session from "express-session";
 import connectRedis from "connect-redis";
+import { MyContext } from "./types";
 
 const main = async () => {
   // connect to DB
@@ -36,6 +37,7 @@ const main = async () => {
         sameSite: "lax", // related to protecting csrf
         secure: __prod__, // cookie only works in https when in production
       },
+      saveUninitialized: false, //create a session by default even with no data in it
       secret: "dklsadjskdjladj",
       resave: false,
     })
@@ -46,7 +48,7 @@ const main = async () => {
       resolvers: [HelloResolver, PostResolver, UserResolver],
       validate: false,
     }),
-    context: ({ req, res }) => ({ em: orm.em, req, res }),
+    context: ({ req, res }): MyContext => ({ em: orm.em, req, res }),
   });
 
   apolloServer.applyMiddleware({ app });
