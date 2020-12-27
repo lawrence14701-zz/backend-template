@@ -54,3 +54,25 @@ creates migrations
 # trouble shooting
 
 - if cookies are not being set in your graphql playground check the settings. Make sure request.credentials is set to 'include'
+
+# How auth is working (behind the scenes)
+
+1.
+
+- req.session.userID = user.id inside users resolvers, data is being stored in the session ( we are storing the id becuase the id on a user should never change.)
+- then the userid --> gets sent to redis
+- redis is a key value store
+- in our case the key will look something like this session: fdfjsdlfjsdifos --- with a value of {userID: 1}
+
+2.
+
+- the express session will then set a cookie on our browser that looks like fisdljfkldsjfklsdjfkd
+- the cookie is a signed version of our redis key
+
+3.
+
+- when a user makes a request then the cookie on the browser (signed version of the key) will be sent to the server
+
+4.
+
+- on the server the cookie gets unsigned/decrypted and then makes a request to redis. It'll look up the key in redis and get the data.
