@@ -22,13 +22,14 @@
   "homepage": "https://github.com/lawrence14701/fullstack-template#readme",
   "devDependencies": {
     "@types/connect-redis": "^0.0.16",
+    "@types/cors": "^2.8.9",
     "@types/express": "^4.17.9",
     "@types/express-session": "^1.17.0",
     "@types/node": "^14.14.8",
     "@types/redis": "^2.8.28",
-    "typescript": "^4.0.5",
+    "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
-    "nodemon": "^2.0.6"
+    "typescript": "^4.0.5"
   },
   "dependencies": {
     "@mikro-orm/cli": "^4.3.4",
@@ -39,6 +40,7 @@
     "argon2": "^0.27.1",
     "class-validator": "^0.12.2",
     "connect-redis": "^5.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "graphql": "^15.4.0",
