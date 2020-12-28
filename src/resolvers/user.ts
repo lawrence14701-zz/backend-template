@@ -83,7 +83,7 @@ export class UserResolver {
     try {
       await em.persistAndFlush(user);
     } catch (err) {
-      if (err.detail.includes("already exists")) {
+      if (err.code === "23505") {
         //duplicate username error
         return {
           errors: [
