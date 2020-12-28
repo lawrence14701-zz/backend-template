@@ -76,3 +76,24 @@ creates migrations
 4.
 
 - on the server the cookie gets unsigned/decrypted and then makes a request to redis. It'll look up the key in redis and get the data.
+
+# to build custom queries if persist and flush does not work
+
+- use mikroOrm/ postgres package
+
+- here is an example
+
+```ts
+import { EntityManager } from "@mikro-orm/postgresql";
+
+const [user] = await (em as EntityManager)
+  .createQueryBuilder(User)
+  .getKnexQuery()
+  .insert({
+    username: options.username,
+    password: hashedPassword,
+    created_at: new Date(),
+    updated_at: new Date(),
+  })
+  .returning("*");
+```
