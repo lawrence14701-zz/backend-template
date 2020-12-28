@@ -108,7 +108,7 @@ let UserResolver = class UserResolver {
                 yield em.persistAndFlush(user);
             }
             catch (err) {
-                if (err.code === "23505") {
+                if (err.detail.includes("already exists")) {
                     return {
                         errors: [
                             { field: "username", message: "username has already been taken" },
