@@ -93,7 +93,7 @@ export class UserResolver {
       }
       console.log("message: ", err.message);
     }
-    //store user id session
+    // store user id session
     // sets cookie on the user and keeps them logged in
     req.session.userId = user.id;
     return { user };
