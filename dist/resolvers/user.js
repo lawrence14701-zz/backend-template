@@ -102,7 +102,7 @@ let UserResolver = class UserResolver {
             const hashedPassword = yield argon2_1.default.hash(options.password);
             let user;
             try {
-                const resut = yield em
+                const result = yield em
                     .createQueryBuilder(User_1.User)
                     .getKnexQuery()
                     .insert({
