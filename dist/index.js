@@ -28,9 +28,9 @@ const typeorm_1 = require("typeorm");
 const Post_1 = require("./entities/Post");
 const User_1 = require("./entities/User");
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
-    const connection = yield typeorm_1.createConnection({
+    yield typeorm_1.createConnection({
         type: "postgres",
-        database: "taptab",
+        database: "fullstack",
         username: "postgres",
         password: "postgres",
         logging: true,

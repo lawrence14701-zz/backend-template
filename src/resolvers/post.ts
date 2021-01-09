@@ -4,7 +4,7 @@ import { Resolver, Query, Arg, Mutation } from "type-graphql";
 @Resolver()
 export class PostResolver {
   @Query(() => [Post])
-  async posts(): Promise<Post[]> {
+  posts(): Promise<Post[]> {
     return Post.find();
   }
 
@@ -14,7 +14,7 @@ export class PostResolver {
   }
 
   @Mutation(() => Post)
-  async createPost(@Arg("title") title: string): Promise<Post> {
+  createPost(@Arg("title") title: string): Promise<Post> {
     return Post.create({ title }).save();
   }
 

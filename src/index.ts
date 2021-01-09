@@ -15,9 +15,9 @@ import { Post } from "./entities/Post";
 import { User } from "./entities/User";
 
 const main = async () => {
-  const connection = await createConnection({
+  await createConnection({
     type: "postgres",
-    database: "taptab",
+    database: "fullstack",
     username: "postgres",
     password: "postgres",
     logging: true,
