@@ -99,7 +99,7 @@ export class UserResolver {
     await redis.set(
       FORGET_PASSWORD_PREFIX + token,
       user.id,
-      "ex",
+      "ex", //expiration
       1000 * 60 * 60 * 24 * 3 //3 days
     );
 
@@ -139,8 +139,10 @@ export class UserResolver {
           email: options.email,
           password: hashedPassword,
         })
-        .returning("*");
-      user = result as any;
+        .returning("*")
+        .execute();
+      console.log(result);
+      user = result.raw[0];
     } catch (err) {
       if (err.code === "23505") {
         //duplicate username error

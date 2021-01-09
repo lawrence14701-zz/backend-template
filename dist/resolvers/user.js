@@ -134,8 +134,10 @@ let UserResolver = class UserResolver {
                     email: options.email,
                     password: hashedPassword,
                 })
-                    .returning("*");
-                user = result;
+                    .returning("*")
+                    .execute();
+                console.log(result);
+                user = result.raw[0];
             }
             catch (err) {
                 if (err.code === "23505") {
